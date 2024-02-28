@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+
+:root {
+  --main-color: #2980b9;
+  --red: #e74c3c;
+  --orange: #f39c12;
+  --light-color: #666;
+  --light-bg: #eee;
+  --white: #fff;
+  --black: #2c3e50;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  --box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--light-bg);
+}
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.head {
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.empty {
+  background-color: var(--white);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  color: var(--red);
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.btn,
+.delete-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 1rem 3rem;
+}
+
+.btn {
+  background-color: var(--main-color);
+}
+
+.delete-btn {
+  background-color: var(--red);
+}
+
+.btn:hover,
+.delete-btn:hover {
+  background-color: var(--black);
+}
+
+.heading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--black);
+}
+
+.heading .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading .flex .logo {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.heading .flex .navbar a {
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-left: 2rem;
+  text-transform: capitalize;
+}
+
+.heading .flex .navbar a:hover {
+  text-decoration: underline;
+}
+
+.heading .flex .navbar a span {
+  padding: 0.2rem 0.5rem;
+  background-color: var(--white);
+  color: var(--black);
+  margin-left: 0.5rem;
+}
+
+#menu-btn {
+  font-size: 3rem;
+  color: var(--white);
+  cursor: pointer;
+  display: none;
+}
+
+.add-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 15rem);
+}
+
+.add-product form {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  width: 50rem;
+}
+
+.add-product form h3 {
+  text-transform: capitalize;
+  color: var(--black);
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.add-product form .box {
+  margin: 1rem 0;
+  padding: 1.4rem;
+  border-radius: 0.5rem;
+  background-color: var(--light-bg);
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.add-product form p {
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  color: var(--light-color);
+}
+
+.add-product form p span {
+  color: var(--red);
+}
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.products .box-container .box {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+}
+
+.products .box-container .box .image {
+  height: 20rem;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.products .box-container .box .name {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+}
+
+.products .box-container .box .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 0;
+}
+
+.products .box-container .box .flex .price {
+  font-size: 1.8rem;
+  color: var(--red);
+  margin-right: auto;
+}
+
+.products .box-container .box .flex .qty {
+  font-size: 1.8rem;
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  width: 6.5rem;
+}
+
+.products .box-container .box .flex .fa-regular {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  height: 3.4rem;
+  width: 4.5rem;
+}
+
+.products .box-container .box .flex .fa-regular:hover {
+  background-color: var(--black);
+}
+
+.products .box-container .box .sub-total {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.products .box-container .box .sub-total span {
+  color: var(--red);
+}
+
+.products .grand-total {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  background-color: var(--white);
+  padding: 2rem;
+}
+
+.products .grand-total p {
+  font-size: 2rem;
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.products .grand-total span {
+  color: var(--red);
+}
+
+.checkout .heading {
+  background-color: transparent;
+  text-transform: capitalize;
+  color: var(--black);
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.checkout .row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.checkout .row form {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  flex: 1 1 50rem;
+}
+
+.checkout .row form h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: var(--black);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.checkout .row form .flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.checkout .row form .flex .box {
+  flex: 1 1 25rem;
+}
+
+.checkout .row form .flex .box p {
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  color: var(--light-color);
+}
+
+.checkout .row form .flex .box p span {
+  color: var(--red);
+}
+
+.checkout .row form .flex .box .input {
+  width: 100%;
+  margin: 1 rem 0;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.checkout .row .summary {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  flex: 1 1 30rem;
+}
+
+.checkout .row .summary .title {
+  font-size: 2rem;
+  color: var(--light-color);
+  border-bottom: var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.checkout .row .summary .flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  overflow-x: hidden;
+}
+
+.checkout .row .summary .flex img {
+  height: 8rem;
+  width: 6rem;
+  object-fit: contain;
+}
+
+.checkout .row .summary .flex div .name {
+  font-size: 2rem;
+  color: var(--black);
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkout .row .summary .flex div .price {
+  font-size: 1.7rem;
+  color: var(--red);
+}
+
+.checkout .row .summary .grand-total {
+  font-size: 1rem;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.8rem;
+  font-size: 2rem;
+  color: var(--light-color);
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+}
+
+.checkout .row .summary .grand-total span {
+  color: var(--red);
+}
+
+/* media queries */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .heading .navbar {
+    position: absolute;
+    padding: 1rem;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+
+  .heading .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .heading .navbar a {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .products .box-container {
+    grid-template-columns: 1fr;
+  }
+}
