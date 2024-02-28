@@ -52,7 +52,7 @@ if (isset($_POST['place_order'])) {
             if ($get_price->rowCount() > 0) {
                 while ($f_price = $get_price->fetch(PDO::FETCH_ASSOC)) {
                     $insert_order = $conn->prepare("INSERT INTO `orders`(id, user_id, name, number, email, address, address_type, method, product_id, price, qty) VALUES (?,?,?,?,?,?,?,?,?,?,?)");            
-                    $insert_order->execute([create_unique_id(), $user_id, $name, $number, $email, $address, $address_type, $method, $f_cart['id'], $f_price['price'], $f_cart['qty']]);
+                    $insert_order->execute([create_unique_id(), $user_id, $name, $number, $email, $address, $address_type, $method, $f_cart['product_id'], $f_price['price'], $f_cart['qty']]);
                     header('location:orders.php');
                 }
 

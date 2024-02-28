@@ -1,7 +1,7 @@
 <header class="heading">
 
   <section class="flex">
-    <a href="/shopping_cart/add_product.php" class="logo">Logo</a>
+    <a href="/shopping_cart/view_products.php" class="logo">Logo</a>
 
     <nav class="navbar">
       <a href="/shopping_cart/add_product.php">add product</a>

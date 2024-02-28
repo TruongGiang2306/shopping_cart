@@ -419,6 +419,181 @@ section {
   color: var(--red);
 }
 
+.orders .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.orders .box-container .box {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.orders .box-container .box .date {
+  padding: 1rem 1.5rem;
+  color: var(--light-color);
+  background-color: var(--light-bg);
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.orders .box-container .box .date i {
+  margin-right: 1rem;
+  color: var(--main-color);
+}
+
+.orders .box-container .box .image {
+  height: 20rem;
+  width: 100%;
+  object-fit: contain;
+  margin: 1rem 0;
+}
+
+.orders .box-container .box .name {
+  font-size: 2rem;
+  color: var(--black);
+  text-overflow: ellipsis;
+  margin: 1rem 0;
+  overflow-x: hidden;
+}
+
+.orders .box-container .box .price {
+  color: var(--red);
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+}
+
+.orders .box-container .box .status {
+  padding-top: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.orders .box-container .box:hover {
+  box-shadow: var(--box-shodow);
+}
+
+.orders .box-container .box:hover .date {
+  background-color: var(--black);
+  color: var(--white);
+}
+.orders .box-container .box:hover .date i {
+  color: var(--white);
+}
+
+.order-details .box-container {
+  background-color: var(--white);
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: var(--box-shodow);
+}
+
+.order-details .box-container .box {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.order-details .box-container .box .col {
+  flex: 1 1 40rem;
+}
+
+.order-details .box-container .box .col .image {
+  height: 17rem;
+  width: 100%;
+  object-fit: contain;
+  margin: 1rem 0;
+}
+
+.order-details .box-container .box .col .title {
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.7rem;
+  color: var(--light-color);
+  background-color: var(--light-bg);
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.order-details .box-container .box .col .title i {
+  margin-right: 1rem;
+  color: var(--black);
+}
+
+.order-details .box-container .box .col .price {
+  color: var(--red);
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+}
+
+.order-details .box-container .box .col .name {
+  font-size: 2rem;
+  color: var(--black);
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.order-details .box-container .box .col .user {
+  padding: 0.7rem 0;
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.5;
+}
+
+.order-details .box-container .box .col .user i {
+  margin-right: 1rem;
+  color: var(--main-color);
+}
+
+.order-details .box-container .box .col .grand-total {
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  font-size: 2rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+}
+
+.order-details .box-container .box .col .grand-total span {
+  color: var(--orange);
+}
+
+.order-details .box-container .box .col .status {
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+}
+
+.order-details .box-container .box .col form input {
+  margin-top: 2.3rem;
+  border-radius: .5rem;
+  padding: 1.6rem;
+}
+
+.order-details .box-container .box .col a {
+  margin-top: 2.3rem;
+  border-radius: .5rem;
+  padding: 1.6rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
 /* media queries */
 
 @media (max-width: 991px) {
